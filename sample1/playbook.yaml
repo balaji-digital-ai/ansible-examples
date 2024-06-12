@@ -1,0 +1,10 @@
+---
+- name: Example playbook
+  hosts: all
+  tasks:
+    - name: Print OS name and version
+      command: uname -a
+      register: os_name
+    - name: Print OS name and version output
+      debug:
+        msg: "{{ os_name.stdout }}"
